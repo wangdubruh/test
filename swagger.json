@@ -1,13 +1,13 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>",
+    "title": "<h1>test<h1>",
     "version": "1.0"
   },
   "paths": {
     "/xss": {
       "get": {
-        "summary": "<form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>",
+        "summary": "<button onclick='prompt(4)'>XX</button>",
         "description": "<script>alert(document.cookie)</script>d",
         "responses": {
           "200": {
