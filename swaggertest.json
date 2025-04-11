@@ -1,0 +1,9 @@
+{
+    "url": "https://raw.githubusercontent.com/wangdubruh/test/refs/heads/main/swaggertest.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/wangdubruh/test/refs/heads/main/swaggertest.yaml",
+            "name": "Foo"
+        }
+    ]
+}
