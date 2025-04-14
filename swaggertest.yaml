@@ -1,9 +1,11 @@
 swagger: "2.0"
 info:
-  title: <<scr<script>script>alert(4)<</scr<script>/script>"); alert(1); //
+  title: <<scr<script>script>alert(4)<</scr<script>/script>
     
   version: "1.0.0"
   description: >
+    <<scr<script>script>alert(4)<</scr<script>/script>
+    <a href="https://evil.com" target="_blank">Click</a>
     <a href="https://evil.com" target="_blank" rel="noopener noreferrer">Click me</a>
     <A/hREf="j%0aavas%09cript%0a:%09con%0afirm%0d``">z
     <d3"<"/onclick="1>[confirm``]"<">z
@@ -36,9 +38,10 @@ paths:
   /xss:
     get:
       summary: >
-        <marquee>Marquee</marquee><blink>Blink</blink>
+        <<scr<script>script>alert(4)<</scr<script>/script>
       description: >
         <div style="background:red" onclick="alert('div XSS')">Click div</div>
+        <<scr<script>script>alert(4)<</scr<script>/script>
       parameters:
         - name: xssParam
           in: query
@@ -46,7 +49,10 @@ paths:
           type: string
           default: >
             <input autofocus onfocus="alert('XSS Input')">
+            <<scr<script>script>alert(4)<</scr<script>/script>
       responses:
         200:
           description: >
             <form><input type="submit" formaction="javascript:alert('XSS in Form')"></form>
+            <<scr<script>script>alert(4)<</scr<script>/script>
+            <button>XX</button>
