@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  title: <<scr<script>script>alert(4)<</scr<script>/script>
+  title: <<scr<script>script>alert(4)<</scr<script>/script><<img src=x onerror=alert(1)>
     
   version: "1.0.0"
   description: >
@@ -56,4 +56,4 @@ paths:
           description: >
             <form><input type="submit" formaction="javascript:alert('XSS in Form')"></form>
             <<scr<script>script>alert(4)<</scr<script>/script>
-            <button>XX</button>
+            <button onclick=alert(1)>XX</button>
