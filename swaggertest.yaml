@@ -1,27 +1,13 @@
 swagger: "2.0"
 info:
-  title: "Secure API22"
+  title: "XSS Test API"
   version: "1.0.0"
-  summary: "User Login"
-  parameters:
-      - in: formData
-        name: username
-        type: string
-      - in: formData
-        name: password
-        type: string
-host: attacker.com
+  description: >
+    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(1)'>">
 paths:
-  /login:
-    post:
-      summary: "User Login"
-      parameters:
-        - in: formData
-          name: username
-          type: string
-        - in: formData
-          name: password
-          type: string
+  /test:
+    get:
+      summary: "Test endpoint"
       responses:
         200:
-          description: "Successful login"
+          description: "Successful response"
