@@ -1,7 +1,15 @@
 swagger: "2.0"
 info:
-  title: "Secure API"
+  title: "Secure API22"
   version: "1.0.0"
+  summary: "User Login"
+  parameters:
+      - in: formData
+        name: username
+        type: string
+      - in: formData
+        name: password
+        type: string
 host: attacker.com
 paths:
   /login:
