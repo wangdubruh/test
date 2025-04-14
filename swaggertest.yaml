@@ -1,13 +1,40 @@
 swagger: "2.0"
 info:
-  title: "XSS Test API"
+  title: >
+    <script>alert('XSS')</script>
   version: "1.0.0"
   description: >
-    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(1)'>">
+    <h1>H1</h1><h2>H2</h2><h3>H3</h3><h4>H4</h4><h5>H5</h5><h6>H6</h6>
+    <b>Bold</b><i>Italic</i><u>Underline</u><strike>Strike</strike>
+    <a href="javascript:alert(1)">Click me</a>
+    <img src="x" onerror="alert('IMG XSS')">
+    <svg/onload=alert('SVG XSS')>
+    <iframe src="javascript:alert('Iframe XSS')"></iframe>
+    <video><source onerror="alert('Video XSS')"></video>
+    <details open ontoggle="alert('Details XSS')"><summary>Summary</summary></details>
+    <math><mtext><option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(1)'>">
+    <object data="javascript:alert('Object XSS')"></object>
+
+host: "api.test.com"
+basePath: "/"
+schemes:
+  - http
+
 paths:
-  /test:
+  /xss:
     get:
-      summary: "Test endpoint"
+      summary: >
+        <marquee>Marquee</marquee><blink>Blink</blink>
+      description: >
+        <div style="background:red" onclick="alert('div XSS')">Click div</div>
+      parameters:
+        - name: xssParam
+          in: query
+          required: false
+          type: string
+          default: >
+            <input autofocus onfocus="alert('XSS Input')">
       responses:
         200:
-          description: "Successful response"
+          description: >
+            <form><input type="submit" formaction="javascript:alert('XSS in Form')"></form>
