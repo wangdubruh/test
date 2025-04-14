@@ -1,19 +1,28 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "title": "Mal<i>BP</i> API<button><input><img src=x onerror=alert(4)>",
-    "version": "1.0.0"
-  },
-  "paths": {},
-  "definitions": {
-    "Malicious": {
-      "type": "object",
-      "properties": {
-        "exploit": {
-          "type": "string",
-          "default": "<style>@import 'http://me6.com/aem/xss2.svg';</style>"
+  "swaggerDoc": {
+    "swagger": "2.0",
+    "info": {
+      "title": "Malicious API",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/exploit": {
+        "get": {
+          "summary": "Exploit",
+          "responses": {
+            "200": {
+              "description": "Success"
+            }
+          }
         }
       }
     }
-  }
+  },
+  "dom_id": "#swagger-ui",
+  "presets": [
+    "SwaggerUIBundle.presets.apis",
+    "SwaggerUIStandalonePreset"
+  ],
+  "layout": "StandaloneLayout",
+  "onComplete": "alert('XSS')"
 }
